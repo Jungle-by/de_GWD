@@ -1612,8 +1612,8 @@ table inet bypassflow {
         type filter hook forward priority -300; policy accept;
         ip daddr 172.16.66.0/24 flow offload @Acceleration
         ip saddr 172.16.66.0/24 flow offload @Acceleration
-        ip daddr 172.17.00.0/16 flow offload @Acceleration
-        ip saddr 172.17.00.0/16 flow offload @Acceleration
+        ip daddr 172.17.0.0/16 flow offload @Acceleration
+        ip saddr 172.17.0.0/16 flow offload @Acceleration
     }
 }
 EOF
