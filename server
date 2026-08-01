@@ -2193,7 +2193,7 @@ read -p "Select:" num
     start_menu
     ;;
     2)
-    bash <(wget --no-check-certificate -qO- https://github.com/mzz2017/lkl-haproxy/raw/master/lkl-haproxy.sh)
+    bash <(wget --no-check-certificate -qO- https://github.com/Jungle-by/lkl-haproxy/raw/master/lkl-haproxy.sh)
     ;;
     4)
     changeDomain
