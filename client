@@ -110,10 +110,10 @@ preDL(){
 mkdir -p /opt/de_GWD
 mkdir -p /opt/de_GWD/.repo
 
-sha256sum_IPchnroute=$(curl -fsSLo- https://ghproxy.net/https://raw.githubusercontent.com/Jungle-by/chnroute/main/IPchnroute.sha256sum)
+sha256sum_IPchnroute=$(curl -fsSLo- https://ghproxy.net/https://raw.githubusercontent.com/jacyl4/chnroute/main/IPchnroute.sha256sum)
 if [[ -n $sha256sum_IPchnroute ]] && [[ $(checkSum /opt/de_GWD/.repo/IPchnroute $sha256sum_IPchnroute) = "false" ]] ; then
 rm -rf /tmp/IPchnroute
-wget --no-check-certificate --show-progress -cqO /tmp/IPchnroute https://ghproxy.net/https://raw.githubusercontent.com/Jungle-by/chnroute/main/IPchnroute
+wget --no-check-certificate --show-progress -cqO /tmp/IPchnroute https://ghproxy.net/https://raw.githubusercontent.com/jacyl4/chnroute/main/IPchnroute
 [[ $(checkSum /tmp/IPchnroute $sha256sum_IPchnroute) = "false" ]] && echo -e "${WHITE}IPchnroute${RED} Download Failed${cRES}" && exit
 [[ $(checkSum /tmp/IPchnroute $sha256sum_IPchnroute) = "true" ]] && mv -f /tmp/IPchnroute /opt/de_GWD/.repo/IPchnroute
 fi
